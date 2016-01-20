@@ -1,0 +1,288 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{multicol}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+  {\setlength{\leftmargin}{#1}}%
+  \item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+  {\setlength{\leftmargin}{-0.5#1}}%
+  \item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+  #1 &
+  #2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Zachary Forman}}
+
+51 Kintore Avenue\ \ \textbullet
+\ \ Prospect\ 5082\ \ \textbullet
+\ \ Adelaide, South Australia
+\\
++61 466 020 412\ \ \textbullet
+\ \ au.zachary.forman@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Work Experience}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  \headerrow
+    {\textbf{Google Sydney}}
+    {\textbf{Chrome}}
+  \\
+  \headerrow
+    {\emph{Software Engineering Intern}}
+    {\emph{November 2015 -- February 2016}}
+  \begin{itemize*}
+    \item Improved determinism of Chrome build process significantly, reducing
+          the number of non-deterministic outputs on Linux by tens of thousands.
+    \item Designed and implemented an experimental framework in javascript
+          for learning about the Chrome build.
+  \end{itemize*}
+
+  \item
+  \headerrow
+    {\textbf{Google Sydney}}
+    {\textbf{Drive}}
+  \\
+  \headerrow
+    {\emph{Software Engineering Intern}}
+    {\emph{November 2014 -- February 2015}}
+  \begin{itemize*}
+    \item Designed and implemented an Android application.
+    \item Adapted a pretrained neural network for recognition of a subset of
+          images, with ~94\% accuracy.
+    \item Worked independently, producing $> 5000$ lines of high quality code.
+  \end{itemize*}
+
+  \item
+  \headerrow
+    {\textbf{Computer Science}}
+    {\textbf{Adelaide University}}
+  \\
+  \headerrow
+    {\emph{Casual Teaching}}
+    {\emph{August 2014 -- present}}
+  \begin{itemize*}
+    \item Taught first year students fundamentals of Computer Science and
+          programming.
+    \item Ran practicals and workshops for first year courses.
+    \item Took tutorials for a first year algorithms and data structures course.
+  \end{itemize*}
+
+  \item
+  \headerrow
+    {\textbf{AutoID Labs}}
+    {\textbf{Adelaide}}
+  \\
+  \headerrow
+    {\emph{Summer Intern}}
+    {\emph{December 2013 -- March 2014}}
+  \begin{itemize*}
+    \item Built and helped design a \CPP \ stream processor that interfaced with
+          pre-existing middleware and machine learning algorithms to generate a
+          stream of predictions.
+    \item Built a visual C$^\sharp$ application to interface with RFID readers
+          and provide a stream of tag reports.
+    \item Reference: Dr. Damith Ranasinghe (damith.ranasinghe@adelaide.edu.au)
+  \end{itemize*}
+
+\end{itemize}
+
+\subsection*{Leadership}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  {\textbf{President of Computer Science Club}}
+  \\
+  \headerrow
+    {\emph{Adelaide University}}
+    {\emph{November 2013 -- November 2015}}
+  \begin{itemize*}
+    \item Improved relationship with the Computer Science faculty, leading to
+          increased involvement during O-week and a large recruitment of first
+          year students.
+    \item Promoted a healthier club environment, which contributed to a more
+          diverse club than in past years.
+    \item Encouraged a culture of excellence within the club, which contributed
+          to a significant number of club members (5+) getting internships at
+          leading tech companies, including Google and Microsoft.
+  \end{itemize*}
+
+  \item
+  {\textbf{Peer Mentor}}
+  \\
+  \headerrow
+    {\emph{Adelaide University}}
+    {\emph{2014 -- Present}}
+  \begin{itemize*}
+    \item Assisting new students in transitioning to University.
+    \item Running introductory tours and lectures for incoming students.
+    \item Outreach events to high schools.
+  \end{itemize*}
+
+\end{itemize}
+
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\begin{multicols}{2}
+\hyphenpenalty=1000
+  \headerrow {\textbf{Language}} {\textbf{Years Experience}}\\
+  \headerrow {\CPP} {3.5}\\
+  \headerrow {C} {3}\\
+  \headerrow {Java} {2.5}\\
+  \headerrow {Go} {0.5}\\
+  \headerrow {Python} {0.75}\\
+
+
+  \headerrow {\textbf{Technology}} {\textbf{Years Experience}}\\
+  \headerrow {SVN} {4}\\
+  \headerrow {Regular Expressions} {3}\\
+  \headerrow {\LaTeX} {3}\\
+  \headerrow {Git} {2}\\
+  \headerrow {Android} {0.5}\\
+\end{multicols}
+\end{indentsection}
+
+\newpage
+
+\subsection*{Education}
+
+\begin{itemize}
+  \parskip=0.1em
+
+  \item
+  {\textbf{Adelaide University}}
+  \\
+  \headerrow
+    {\emph{Bachelor of Engineering (Honours) (Software Engineering)}}
+    {\emph{2013 -- Present}}
+  \\
+  Expected Graduation: November 2016
+  \begin{itemize*}
+    \item GPA: 6.6/7.0
+    \item Selected key courses:
+    \begin{itemize*}
+      \item \headerrow
+        {Object Oriented Programming (2013 s1)}
+        {High Distinction}
+      \item \headerrow
+        {Algorithm Design and Data Structures (2013 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Systems Programming in C and C++ (2013 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Computer Networks and Applications (2014 s1)}
+        {High Distinction}
+      \item \headerrow
+        {Artificial Intelligence (2014 s1)}
+        {High Distinction}
+      \item \headerrow
+        {Operating Systems (2014 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Event Driven Computing (2014 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Computer Vision (2015 s1)}
+        {Distinction}
+      \item \headerrow
+        {Distributed Systems (2015 s2)}
+        {Distinction}
+      \item \headerrow
+        {Evolutionary Computation (2015 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Introduction to Statistical Machine Learning (2015 s2)}
+        {High Distinction}
+      \item \headerrow
+        {Distributed Databases and Data Mining (2016 s1)}
+        {Pending}
+      \item \headerrow
+        {Mining Big Data (2016 s2)}
+        {Pending}
+    \end{itemize*}
+    \item Recipient of Adelaide University Undergraduate Scholarship for outstanding academic merit.
+  \end{itemize*}
+
+\end{itemize}
+
+\subsection*{Miscellaneous}
+\begin{itemize}
+  \item Competitions
+    \begin{itemize}
+      \item Google Code Jam 2013-2015 (Qualified)
+      \item ACM 2015 (2nd place on site)
+      \item ACM 2014 (3rd place on site)
+      \item ACM 2013
+    \end{itemize}
+  \item
+  \headerrow
+    {Github \& Personal Projects}
+    {\url{https://www.github.com/ZacharyForman}}
+    \begin{itemize}
+      \item \href{https://github.com/ZacharyForman/Binary_Matcher}{Binary Matcher}
+        \begin{itemize}
+          \item Tool for analyzing binaries, and potentially doing clever
+                binary diffing.
+          \item Learned about ELF file format and how binaries are run on Linux.
+        \end{itemize}
+      \item \href{https://github.com/ZacharyForman/net}{net}
+        \begin{itemize}
+          \item C++ wrapper of BSD sockets, and several other utilities for
+                code that interacts with the Internet
+          \item Learned more about BSD sockets, and experimented with API
+                design.
+        \end{itemize}
+      \item \href{https://github.com/ZacharyForman/cpu}{cpu}
+        \begin{itemize}
+          \item Instruction architecture simulator for the DLX architecture.
+          \item Improved my C programming ability and consolidated my knowledge
+                of DLX.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+\end{document}
